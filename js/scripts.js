@@ -9,7 +9,10 @@ $(function() {
   };
 
   function createTweet(input) {
-    if (!(input.length === 0)) {
+    if (input.length === 0) {
+      alert('No quote loaded!')
+      return null;
+    }
       var data = input[0];
       var quoteText = $(data.content).text().trim();
       var quoteAuthor = data.title;
@@ -27,11 +30,7 @@ $(function() {
         $('.author').text('Author: ' + quoteAuthor);
         $('.tweet').attr('href', tweet);
       };
-    } else {
-      alert('No quote loaded!')
     };
-  
-  };
 
   $(document).ready(function() {
       getQuote();
