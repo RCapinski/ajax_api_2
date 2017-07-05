@@ -9,9 +9,9 @@ $(function() {
   };
 
   function createTweet(input) {
-    if (input.length === 0) {
+    if (!input.length) {
       alert('No quote loaded!');
-      return null;
+      return;
     };
       var data = input[0];
       var quoteText = $(data.content).text().trim();
