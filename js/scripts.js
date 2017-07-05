@@ -10,9 +10,9 @@ $(function() {
 
   function createTweet(input) {
     if (input.length === 0) {
-      alert('No quote loaded!')
+      alert('No quote loaded!');
       return null;
-    }
+    };
       var data = input[0];
       var quoteText = $(data.content).text().trim();
       var quoteAuthor = data.title;
